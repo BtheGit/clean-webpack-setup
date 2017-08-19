@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --port=8000 --hot --inline --colors --open",
     "build": "webpack -p",
-    "test": "mocha config/testSetup.js src/**/*.test.js --reporter progress"
+    "test": "mocha config/testSetup.js src/**/*.test.js -c",
+    "test:watch": "npm run test -- --watch",
+    "dev": "npm run start && npm run test:watch"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
     "chai": "^4.1.1",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.5",

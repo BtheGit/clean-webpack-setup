@@ -1,5 +1,4 @@
-require('./index.scss');
+import { doubleNum } from './components/utils';
+import './index.scss';
 
-const testArrowFunction = arr => [...arr] + [...arr];
-
-console.log('hello.')
+console.log(doubleNum(4));
